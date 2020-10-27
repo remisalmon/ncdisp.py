@@ -47,7 +47,6 @@ def ncdisp(source):
 
     return
 
-@nowarnings
 def ncdisp_group(data, level = 0):
     if data.ncattrs():
         print('{}{}Attributes:'.format('\t'*level*2,
@@ -85,7 +84,7 @@ def ncdisp_group(data, level = 0):
             print('{}\t{}'.format('\t'*level*2,
                                   v))
 
-            if not data.variables[v].shape:
+            if len(data.variables[v].shape) == 0:
                 size = '1x1'
             elif len(data.variables[v].shape) == 1:
                 size = '{}x1'.format(data.variables[v].shape[0])
