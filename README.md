@@ -68,7 +68,7 @@ Groups:
 
 ## Requirements
 
-`netcdf4>=1.5.3`
+`netcdf4>=1.5.6`
 
 ## Notes
 
