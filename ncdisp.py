@@ -4,23 +4,9 @@
 # October 6, 2020
 
 # imports
-import warnings
-
 from netCDF4 import Dataset
 
 # functions
-def nowarnings(f):
-    def wrapper(*args, **kwargs):
-        with warnings.catch_warnings():
-            warnings.simplefilter('ignore')
-
-            f(*args, **kwargs)
-
-        return
-
-    return wrapper
-
-@nowarnings
 def ncdisp(source):
     """
     Display contents of NetCDF data source.
