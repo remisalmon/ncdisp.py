@@ -1,12 +1,8 @@
 # Remi Salmon
 # salmon.remi@gmail.com
-#
-# October 6, 2020
 
-# imports
 from netCDF4 import Dataset
 
-# functions
 def ncdisp(source):
     """
     Display contents of NetCDF data source.
@@ -33,7 +29,7 @@ def ncdisp(source):
 
     return
 
-def ncdisp_group(data, level = 0):
+def ncdisp_group(data, level):
     if data.ncattrs():
         print('{}{}Attributes:'.format('\t'*level*2,
                                        'Global ' if level == 0 else ''))
