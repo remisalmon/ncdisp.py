@@ -25,7 +25,7 @@ def ncdisp(source):
     print('Format:')
     print('\t{}'.format(data.file_format.lower()))
 
-    ncdisp_group(data, level = 0)
+    ncdisp_group(data, level=0)
 
     return
 
@@ -107,7 +107,7 @@ def ncdisp_group(data, level):
             print('{}\t{}/'.format('\t'*level*2,
                                    data.groups[g].path))
 
-            ncdisp_group(data.groups[g], level = level+1)
+            ncdisp_group(data.groups[g], level=level+1)
 
     else:
         return
