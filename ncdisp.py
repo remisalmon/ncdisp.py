@@ -1,6 +1,8 @@
 # Remi Salmon
 # salmon.remi@gmail.com
 
+import sys
+
 from netCDF4 import Dataset
 
 def ncdisp(source):
@@ -111,3 +113,10 @@ def ncdisp_group(data, level):
 
     else:
         return
+
+if __name__ == '__main__':
+    try:
+        ncdisp(sys.argv[1])
+
+    except:
+        print('usage: python ncdisp.py source.nc')

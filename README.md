@@ -7,6 +7,13 @@ A Python implementation of MATLAB's [ncdisp](https://www.mathworks.com/help/matl
 >>> from ncdisp import ncdisp
 >>> ncdisp('example.nc')
 ```
+
+or
+
+```shell
+> python ncdisp.py example.nc
+```
+
 ```
 Source:
 	example.nc
